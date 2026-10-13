@@ -70,21 +70,76 @@ h2{font-family:'Gaegu';font-size:26px;margin:6px 4px 10px}
     </div>
     <div class="go">›</div>
   </a>
-  <div class="ep lock">
-    <div class="thumb t2">🎻</div>
-    <div class="info"><div class="no">EP.02 · 좋고 싫음 말하기</div><div class="tt">I don't like…, but I like…</div><div class="ds">곧 열려요</div></div>
-    <div class="go">🔒</div>
-  </div>
-  <div class="ep lock">
-    <div class="thumb t3">🐺</div>
-    <div class="info"><div class="no">EP.03 · 현재진행형</div><div class="tt">What are you doing?</div><div class="ds">곧 열려요</div></div>
-    <div class="go">🔒</div>
-  </div>
-  <div class="ep lock">
-    <div class="thumb t4">💜</div>
-    <div class="info"><div class="no">EP.04 · can / can't</div><div class="tt">친구를 도와줄 수 있어</div><div class="ds">곧 열려요</div></div>
-    <div class="go">🔒</div>
-  </div>
+  <a class="ep open" href="ep02.html" data-ep="02">
+    <div class="thumb t2">🛶</div>
+    <div class="info">
+      <div class="no">EP.02 · like / don't like</div>
+      <div class="tt">보트 경주</div>
+      <div class="ds">라이벌 비앙카와 맞대결 · 좋고 싫음 말하기</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
+  <a class="ep open" href="ep03.html" data-ep="03">
+    <div class="thumb t3">✍️</div>
+    <div class="info">
+      <div class="no">EP.03 · 현재진행형</div>
+      <div class="tt">마을 봉사활동</div>
+      <div class="ds">소설 쓰는 웬즈데이 · 지금 하는 일 말하기</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
+  <a class="ep open" href="ep04.html" data-ep="04">
+    <div class="thumb t4">💃</div>
+    <div class="info">
+      <div class="no">EP.04 · can / can't</div>
+      <div class="tt">댄스파티</div>
+      <div class="ds">나만의 춤 · 할 수 있는 것 말하기</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
+  <a class="ep open" href="ep05.html" data-ep="05">
+    <div class="thumb t2">🌹</div>
+    <div class="info">
+      <div class="no">EP.05 · 3인칭 -s</div>
+      <div class="tt">가족 방문 주말</div>
+      <div class="ds">엄마 모티시아 등장 · 가족 소개하기</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
+  <a class="ep open" href="ep06.html" data-ep="06">
+    <div class="thumb t3">🎂</div>
+    <div class="info">
+      <div class="no">EP.06 · There is / are</div>
+      <div class="tt">깜짝 생일파티</div>
+      <div class="ds">16번째 생일 · 파티 묘사하기</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
+  <a class="ep open" href="ep07.html" data-ep="07">
+    <div class="thumb t4">💡</div>
+    <div class="info">
+      <div class="no">EP.07 · 과거형</div>
+      <div class="tt">페스터 삼촌</div>
+      <div class="ds">오랜만의 만남 · 지난 일 말하기</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
+  <a class="ep open" href="ep08.html" data-ep="08">
+    <div class="thumb t1">🤗</div>
+    <div class="info">
+      <div class="no">EP.08 · 미래 will</div>
+      <div class="tt">마지막 포옹</div>
+      <div class="ds">시즌1 피날레 · 마음 전하기</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
 
   <p class="foot">한 회차 25분 · 넘겨보며 듣고, 옮기고, 써보기</p>
 </main>
@@ -93,7 +148,7 @@ h2{font-family:'Gaegu';font-size:26px;margin:6px 4px 10px}
 if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 
 // 진도 표시 (각 회차의 스탬프 4개 기준)
-const WORDS={ '01':12 };
+const WORDS={'01':12,'02':12,'03':12,'04':12,'05':12,'06':12,'07':12,'08':12};
 let done=0,stamps=0,words=0;
 document.querySelectorAll('.ep[data-ep]').forEach(a=>{
   let st={};try{st=JSON.parse(localStorage.getItem('ennote-ep'+a.dataset.ep+'-stamps')||'{}');}catch(e){}

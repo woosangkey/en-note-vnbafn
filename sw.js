@@ -1,7 +1,7 @@
 // 넷플릭스 영어노트 — 오프라인 저장 (온라인이면 최신본, 오프라인이면 저장본)
 // 새 회차를 추가하면 VERSION 숫자를 올리고 FILES에 파일명을 넣을 것
-const VERSION = 'ennote-v1';
-const FILES = ['./', 'index.html', 'ep01.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
+const VERSION = 'ennote-v2';
+const FILES = ['./', 'index.html', 'ep01.html', 'ep02.html', 'ep03.html', 'ep04.html', 'ep05.html', 'ep06.html', 'ep07.html', 'ep08.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
