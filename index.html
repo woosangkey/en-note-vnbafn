@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>넷플릭스 영어노트</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2b2633">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b2633;--soft:#6b6475;--line:#e6dccf;--lav:#b9a7e8;--lav-soft:#f1ecff;--pink:#ff9ec7;--pink-soft:#ffeaf3;--mint:#8fd9c4;--yel:#ffd66e}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#efe8f4;color:var(--ink);font-family:'Noto Sans KR','Malgun Gothic',sans-serif}
+.hero{background:linear-gradient(135deg,#8b6cff,#5a3fd6);color:#fff;padding:calc(28px + env(safe-area-inset-top)) 20px 64px;border-radius:0 0 28px 28px;text-align:center}
+.hero small{font-family:'Nunito';font-weight:800;letter-spacing:1px;font-size:12px;opacity:.85}
+.hero h1{font-family:'Gaegu',cursive;font-size:38px;line-height:1.15;margin:6px 0 8px}
+.hero p{margin:0;font-size:14px;opacity:.9}
+.wrap{max-width:560px;margin:-44px auto 0;padding:0 16px 40px}
+.stat{background:#fff;border-radius:18px;padding:14px 18px;display:flex;justify-content:space-around;box-shadow:0 6px 18px rgba(60,40,120,.12);margin-bottom:18px}
+.stat div{text-align:center;font-size:12px;color:var(--soft)}
+.stat b{display:block;font-family:'Nunito';font-size:22px;color:var(--ink)}
+h2{font-family:'Gaegu';font-size:26px;margin:6px 4px 10px}
+.ep{display:flex;gap:14px;align-items:center;background:#fff;border-radius:18px;padding:14px;margin-bottom:12px;text-decoration:none;color:inherit;border:2px solid transparent;box-shadow:0 3px 10px rgba(60,40,120,.06);transition:transform .12s}
+.ep:active{transform:scale(.98)}
+.ep.open{border-color:var(--lav)}
+.thumb{flex:none;width:72px;height:72px;border-radius:16px;display:grid;place-items:center;font-size:34px}
+.t1{background:linear-gradient(135deg,#2d2740 50%,#ffe1ef 50%)}
+.t2{background:linear-gradient(135deg,#ffe6a6,#ffb3d1)}
+.t3{background:linear-gradient(135deg,#bfeadd,#c9b8f2)}
+.t4{background:linear-gradient(135deg,#c9b8f2,#ff9ec7)}
+.info{flex:1;min-width:0}
+.info .no{font-family:'Nunito';font-weight:800;font-size:11px;color:#6a52b8}
+.info .tt{font-weight:700;font-size:16px;margin:1px 0}
+.info .ds{font-size:12.5px;color:var(--soft)}
+.bar{height:7px;background:#eee8f5;border-radius:99px;margin-top:7px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--lav));border-radius:99px;transition:width .6s}
+.go{flex:none;font-size:22px;color:var(--lav)}
+.ep.lock{opacity:.55;pointer-events:none}
+.ep.lock .go{font-size:16px}
+.install{display:none;width:100%;border:none;border-radius:16px;padding:14px;font-size:15px;font-weight:700;background:var(--ink);color:#fff;margin:4px 0 18px;cursor:pointer}
+.foot{text-align:center;font-size:12px;color:var(--soft);margin-top:20px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <small>NETFLIX ENGLISH NOTE</small>
+  <h1>나의<br>넷플릭스 영어노트</h1>
+  <p>좋아하는 장면으로 중학교 영어 준비하기 ✨</p>
+</header>
+
+<main class="wrap">
+  <div class="stat">
+    <div><b id="sDone">0</b>완료한 회차</div>
+    <div><b id="sStamp">0</b>모은 스탬프</div>
+    <div><b id="sWords">0</b>배운 단어</div>
+  </div>
+
+  <button class="install" id="installBtn">📲 홈 화면에 앱으로 추가하기</button>
+
+  <h2>📺 웬즈데이 시즌1</h2>
+  <a class="ep open" href="ep01.html" data-ep="01">
+    <div class="thumb t1">🖤</div>
+    <div class="info">
+      <div class="no">EP.01 · be동사</div>
+      <div class="tt">새 학교 첫날</div>
+      <div class="ds">정반대 룸메이트를 만나다 · 자기소개 표현</div>
+      <div class="bar"><i></i></div>
+    </div>
+    <div class="go">›</div>
+  </a>
+  <div class="ep lock">
+    <div class="thumb t2">🎻</div>
+    <div class="info"><div class="no">EP.02 · 좋고 싫음 말하기</div><div class="tt">I don't like…, but I like…</div><div class="ds">곧 열려요</div></div>
+    <div class="go">🔒</div>
+  </div>
+  <div class="ep lock">
+    <div class="thumb t3">🐺</div>
+    <div class="info"><div class="no">EP.03 · 현재진행형</div><div class="tt">What are you doing?</div><div class="ds">곧 열려요</div></div>
+    <div class="go">🔒</div>
+  </div>
+  <div class="ep lock">
+    <div class="thumb t4">💜</div>
+    <div class="info"><div class="no">EP.04 · can / can't</div><div class="tt">친구를 도와줄 수 있어</div><div class="ds">곧 열려요</div></div>
+    <div class="go">🔒</div>
+  </div>
+
+  <p class="foot">한 회차 25분 · 넘겨보며 듣고, 옮기고, 써보기</p>
+</main>
+
+<script>
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+
+// 진도 표시 (각 회차의 스탬프 4개 기준)
+const WORDS={ '01':12 };
+let done=0,stamps=0,words=0;
+document.querySelectorAll('.ep[data-ep]').forEach(a=>{
+  let st={};try{st=JSON.parse(localStorage.getItem('ennote-ep'+a.dataset.ep+'-stamps')||'{}');}catch(e){}
+  const n=Object.values(st).filter(Boolean).length;
+  stamps+=n;if(n>=4){done++;words+=WORDS[a.dataset.ep]||0;}
+  setTimeout(()=>{a.querySelector('.bar i').style.width=(n/4*100)+'%';},150);
+  if(n>=4)a.querySelector('.ds').textContent='🎉 완료! 다시 복습해볼까?';
+});
+document.getElementById('sDone').textContent=done;
+document.getElementById('sStamp').textContent=stamps;
+document.getElementById('sWords').textContent=words;
+
+// 갤럭시 크롬: 앱 설치 버튼
+let deferred=null;
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;document.getElementById('installBtn').style.display='block';});
+document.getElementById('installBtn').onclick=async()=>{if(!deferred)return;deferred.prompt();await deferred.userChoice;deferred=null;document.getElementById('installBtn').style.display='none';};
+addEventListener('appinstalled',()=>{document.getElementById('installBtn').style.display='none';});
+</script>
+</body>
+</html>
